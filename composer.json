@@ -1,0 +1,10 @@
+{
+    "name": "willystadnick/sales-parser",
+    "authors": [
+        {
+            "name": "Willy Stadnick",
+            "email": "willy.stadnick@gmail.com"
+        }
+    ],
+    "require": {}
+}
