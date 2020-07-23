@@ -4,6 +4,12 @@ class Parser
 {
 	function run()
 	{
+		$entities = [
+			'001' => 'salesmans',
+			'002' => 'customers',
+			'003' => 'sales',
+		];
+
 		$files = glob('data/in/*.dat');
 
 		foreach ($files as $file) {
@@ -25,17 +31,7 @@ class Parser
 
 				list($entity, $data) = explode(',', $line, 2);
 
-				switch ($entity) {
-					case '001':
-						$salesmans->add($data);
-						break;
-					case '002':
-						$customers->add($data);
-						break;
-					case '003':
-						$sales->add($data);
-						break;
-				}
+				${$entities[$entity]}->add($data);
 			}
 
 			$output = [];
