@@ -29,6 +29,12 @@ class DefaultEntity
 
 		$data = str_replace($white, '', $data);
 
+		$space = [
+			'+',
+		];
+
+		$data = str_replace($space, ' ', $data);
+
 		return $data;
 	}
 }
