@@ -15,7 +15,7 @@ class SalesmanCollection extends DefaultCollection
 			$total += $item->getSalary();
 		}
 
-		return $total / $this->count();
+		return round($total / $this->count(), 2);
 	}
 
 	public function getByName($name)
