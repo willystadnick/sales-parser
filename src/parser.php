@@ -31,6 +31,10 @@ class Parser
 
 				list($entity, $data) = explode(',', $line, 2);
 
+				if ( ! isset($entities[$entity])) {
+					continue;
+				}
+
 				${$entities[$entity]}->add($data);
 			}
 
